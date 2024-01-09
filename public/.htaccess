@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+#если запрос не на файл и не на папку то перенаправляется на index.php
+#RewriteCond %{REQUEST_FILENAME} !-d
+#про папку писать не нужно
+RewriteRule (.*) index.php?$1 [L,QSA]
+#присоединяем гет параметры
+#Options -Indexes
