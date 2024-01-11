@@ -1,0 +1,14 @@
+{
+  "name": "wfm/wfm",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "autoload": {
+    "psr-4": {
+      "wfm\\": "vendor/wfm",
+      "app\\": "app"
+    }
+  },
+  "require": {
+  }
+}
