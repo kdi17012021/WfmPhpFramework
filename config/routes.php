@@ -7,7 +7,7 @@ Router::add('^admin/?$', ['controller' => 'Main', 'action' => 'index', 'admin_pr
 Router::add('^admin/(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$', ['admin_prefix' => 'admin']);
 //то же самое что и внизу но для админки
 
-Router::add('^$', ['controller' => 'Main', 'action' => 'index']);
+Router::add('^$', ['controller' => 'Main']);
 //регулярное выражение от начала до конца строки ничего нет - просто new-ishop.loc/
 Router::add('^(?P<controller>[a-z-]+)/(?P<action>[a-z-]+)/?$');
 //() - карманы которые записывают в массив с ключами контроллер / вью что угодно
