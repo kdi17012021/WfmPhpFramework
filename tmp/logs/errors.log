@@ -18,3 +18,15 @@
 =================
 [2024-01-20 21:34:52] Текст ошибки: Call to undefined method wfm\Router::upperCamelCase() | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 62
 =================
+[2024-01-21 15:41:27] Текст ошибки: Контроллер app\controllers\MainController не найден | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 45
+=================
+[2024-01-21 15:41:27] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 48
+=================
+[2024-01-21 15:42:31] Текст ошибки: Контроллер app\controllers\MainController не найден | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 45
+=================
+[2024-01-21 15:42:32] Текст ошибки: Контроллер app\controllers\MainController не найден | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 45
+=================
+[2024-01-21 15:42:41] Текст ошибки: Контроллер app\controllers\MainController не найден | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 45
+=================
+[2024-01-21 15:43:18] Текст ошибки: Метод app\controllers\MainController::indexAction не найден | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 42
+=================

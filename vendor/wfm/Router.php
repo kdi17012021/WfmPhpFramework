@@ -30,9 +30,22 @@ class Router
     public static function dispatch($url)//получаетто что после домена запуускается в классе App
     {
         if (self::matchRoute($url)) {
-            echo 'OK';
+            $controller = 'app\controllers\\' . self::$route['admin_prefix'] . self::$route['controller'] . 'Controller';
+            //получим путь к контроллеру с постфиксом 'Controller'
+            //потом проверяем есть ли вообще такой контроллер
+            if (class_exists($controller)){
+                $controllerObject = new $controller(self::$route);
+                $action = self::lowerCamelCase(self::$route['action'] . 'Action');// экшон это метод класса контроллера
+                if(method_exists($controllerObject, $action)){
+                    $controllerObject -> $action();
+                }else{
+                    throw new \Exception("Метод {$controller}::{$action} не найден", 404 );
+                }
+            }else{
+                throw new \Exception("Контроллер {$controller} не найден", 404 );
+            }
         } else {
-            echo 'NO';
+            throw new \Exception("Страница не найдена", 404);
         }
     }
 
@@ -58,12 +71,13 @@ class Router
                 if (!isset($route['admin_prefix'])) {//если в админ префикс(его может и не быть) ничего не попало то делаем провекр
                     $route['admin_prefix'] = '';//записываем пустую строку в любом случае даже если его нет
                 } else {//а если там что то есть
-                    $route['admin_prefix'] = '\\';//слеши для пространства имен
+                    $route['admin_prefix'] .= '\\';//слеш для пространства имен
                 }
-                debug($route);
+//                debug($route);
                 $route['controller'] = self::upperCamelCase($route['controller']);//переименовываем и причесываем названия классов
                 //потому что в имя контироллера может попасть new-product а так класс называть нельзя - надо NewProduct
-                debug($route);
+//                debug($route);
+                self::$route = $route;
                 return true;
             }
         }
