@@ -27,8 +27,21 @@ class Router
         return self::$route;
     }
 
-    public static function dispatch($url)//получаетто что после домена запуускается в классе App
+
+    protected static function removeQueryString($url)
     {
+        if ($url){//если сюда что то попадает
+            $params = explode('&', $url,2);//    [0] => page/view/ [1] => text=test&some=123
+            if(false === str_contains($params[0],'=')){//если на главной странице будут гет параметры то они попадут в первую часть массива
+                //поэтому если знака = нет в первом ключе массива $params то мы вернем просто подстроку без концевого слеша page/view
+                return rtrim($params[0], '/');
+            };
+        }
+        return '';// для главной страницы если проверка выше найдет знак = то вместо того что есть в параметре $url пустая строка
+    }
+    public static function dispatch($url)//получаем то что после домена. запускается в классе App
+    {
+        $url = self::removeQueryString($url);//убираем гет параметры
         if (self::matchRoute($url)) {
             $controller = 'app\controllers\\' . self::$route['admin_prefix'] . self::$route['controller'] . 'Controller';
             //получим путь к контроллеру с постфиксом 'Controller'
