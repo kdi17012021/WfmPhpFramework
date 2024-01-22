@@ -30,3 +30,5 @@
 =================
 [2024-01-21 15:43:18] Текст ошибки: Метод app\controllers\MainController::indexAction не найден | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 42
 =================
+[2024-01-21 17:48:00] Текст ошибки: Call to undefined method app\controllers\PageController::getModel() | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 54
+=================

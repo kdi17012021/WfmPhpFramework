@@ -47,7 +47,11 @@ class Router
             //получим путь к контроллеру с постфиксом 'Controller'
             //потом проверяем есть ли вообще такой контроллер
             if (class_exists($controller)){
+
+                /** @var Controller $controllerObject *///писать не обязательно php doc для того чтобы показать среде разработки что это объект класса Controller
+
                 $controllerObject = new $controller(self::$route);
+                $controllerObject->getModel();
                 $action = self::lowerCamelCase(self::$route['action'] . 'Action');// экшон это метод класса контроллера
                 if(method_exists($controllerObject, $action)){
                     $controllerObject -> $action();
