@@ -45,6 +45,15 @@ class View
                 throw new \Exception("Не найден шаблон {$layout_file}", 500);
             }
         }
+
+    }
+
+    public function getMeta()
+    {
+        $out = '<title>' . h($this->meta['title']) . '</title>' . PHP_EOL;//h= htmlspecialchars
+        $out .= '<meta name="description" content="' . h($this->meta['description']) . '">' . PHP_EOL;
+        $out .= '<meta name="keywords" content="' . h($this->meta['keywords']) . '">' . PHP_EOL;
+        return $out;
     }
 
 }
