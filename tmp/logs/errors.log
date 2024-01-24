@@ -32,3 +32,27 @@
 =================
 [2024-01-21 17:48:00] Текст ошибки: Call to undefined method app\controllers\PageController::getModel() | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 54
 =================
+[2024-01-22 13:38:28] Текст ошибки: Typed property wfm\Controller::$model must not be accessed before initialization | Файл: C:\OSPanel\domains\new-ishop.loc\app\controllers\MainController.php | Строка: 9
+=================
+[2024-01-22 13:38:28] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 67
+=================
+[2024-01-22 13:42:19] Текст ошибки: Контроллер app\controllers\admin\ControllerController не найден | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 64
+=================
+[2024-01-22 13:42:36] Текст ошибки: Контроллер app\controllers\admin\LolController не найден | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 64
+=================
+[2024-01-22 13:43:14] Текст ошибки: Контроллер app\controllers\admin\PageController не найден | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 64
+=================
+[2024-01-22 13:43:35] Текст ошибки: Не найден вид C:\OSPanel\domains\new-ishop.loc/app/views/admin/Main/index.php | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\View.php | Строка: 38
+=================
+[2024-01-22 13:44:35] Текст ошибки: Typed property wfm\Controller::$model must not be accessed before initialization | Файл: C:\OSPanel\domains\new-ishop.loc\app\controllers\MainController.php | Строка: 9
+=================
+[2024-01-22 13:44:52] Текст ошибки: Typed property wfm\Controller::$model must not be accessed before initialization | Файл: C:\OSPanel\domains\new-ishop.loc\app\controllers\MainController.php | Строка: 9
+=================
+[2024-01-22 13:44:59] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 67
+=================
+[2024-01-22 13:45:34] Текст ошибки: Typed property wfm\Controller::$model must not be accessed before initialization | Файл: C:\OSPanel\domains\new-ishop.loc\app\controllers\MainController.php | Строка: 9
+=================
+[2024-01-22 13:46:49] Текст ошибки: Не найден вид C:\OSPanel\domains\new-ishop.loc/app/views/Main/index.php | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\View.php | Строка: 38
+=================
+[2024-01-22 13:51:54] Текст ошибки: Не найден вид C:\OSPanel\domains\new-ishop.loc/app/views/Main/index.php | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\View.php | Строка: 37
+=================

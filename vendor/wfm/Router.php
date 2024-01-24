@@ -55,6 +55,8 @@ class Router
                 $action = self::lowerCamelCase(self::$route['action'] . 'Action');// экшон это метод класса контроллера
                 if(method_exists($controllerObject, $action)){
                     $controllerObject -> $action();
+                    $controllerObject -> getView();
+
                 }else{
                     throw new \Exception("Метод {$controller}::{$action} не найден", 404 );
                 }

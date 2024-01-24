@@ -20,4 +20,4 @@ new \wfm\App();
 
 //echo $ttteessst;
 
-debug(\wfm\Router::getRoutes());
+//debug(\wfm\Router::getRoutes());
