@@ -60,3 +60,9 @@
 =================
 [2024-01-24 11:37:04] Текст ошибки: Undefined variable $test | Файл: C:\OSPanel\domains\new-ishop.loc\app\views\Main\index.php | Строка: 2
 =================
+[2024-01-24 13:16:33] Текст ошибки: require_once(C:\OSPanel\domains\new-ishop.loc/config/config_db.php): Failed to open stream: No such file or directory | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Db.php | Строка: 11
+=================
+[2024-01-24 13:17:14] Текст ошибки: compact(): Argument #1 must be string or array of strings, RedBeanPHP\OODBBean given | Файл: C:\OSPanel\domains\new-ishop.loc\app\controllers\MainController.php | Строка: 16
+=================
+[2024-01-24 13:37:47] Текст ошибки: Undefined variable $test | Файл: C:\OSPanel\domains\new-ishop.loc\app\views\Main\index.php | Строка: 2
+=================
