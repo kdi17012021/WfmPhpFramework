@@ -8,7 +8,8 @@ class MainController extends Controller
     public function indexAction()
     {
         $names = $this->model->get_names();
-        debug($names);
+        $one_name = R::getRow( 'SELECT * FROM name WHERE id = 2');//регистрочувствителен
+//        debug($names);
 //        var_dump($this->model);
 //        echo __METHOD__;//app\controllers\MainController::indexAction
         $this->setMeta('Главная Страница', 'Описание написали', 'йа сеошник');

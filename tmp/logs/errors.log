@@ -66,3 +66,7 @@
 =================
 [2024-01-24 13:37:47] Текст ошибки: Undefined variable $test | Файл: C:\OSPanel\domains\new-ishop.loc\app\views\Main\index.php | Строка: 2
 =================
+[2024-01-25 12:17:31] Текст ошибки: Class "wfm\R" not found | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\View.php | Строка: 63
+=================
+[2024-01-25 12:17:31] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\new-ishop.loc\vendor\wfm\Router.php | Строка: 67
+=================
