@@ -21,6 +21,8 @@ class MainController extends AppController
 //        $this->set(compact('names'));
 
         $slides = R::findAll('slider');//получили из базы пути к каждому слайдосу
-        $this->set(compact('slides'));//прокидываем в вид чтобы использовать в main/index.php
+
+        $products = $this->model->get_hits(1, 6);
+        $this->set(compact('slides', 'products'));//прокидываем в вид чтобы использовать в main/index.php
     }
 }
