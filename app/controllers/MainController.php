@@ -22,7 +22,8 @@ class MainController extends AppController
 
         $slides = R::findAll('slider');//получили из базы пути к каждому слайдосу
 
-        $products = $this->model->get_hits(1, 6);
+        $products = $this->model->get_hits(1, 6);// в свойстве модель(класса контроллер самого базового) роутер записывает путь к классу модели. В данном случае -  app/models/Main.php. в котором гет хитс
         $this->set(compact('slides', 'products'));//прокидываем в вид чтобы использовать в main/index.php
+        $this->setMeta("Главная страница", 'descr...', 'keywords...');
     }
 }

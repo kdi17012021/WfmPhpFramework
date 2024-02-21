@@ -1,7 +1,7 @@
 <?php
 
 use wfm\View;
-
+use wfm\App;
 /** @var $this View */
 
 ?>
@@ -18,6 +18,7 @@ use wfm\View;
     <link rel="stylesheet" href="<?= PATH ?>/assets/css/magnific-popup.css">
     <link rel="stylesheet" href="<?= PATH ?>/assets/css/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= PATH ?>/assets/img/favicon.png">
+    <?= $this->getMeta() //урезанная обертка echo ?>
     <?php $this->getMeta() ?>
 </head>
 <body>
@@ -82,7 +83,7 @@ use wfm\View;
 
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid p-0">
-                    <a class="navbar-brand" href="index.html">Shop Brand</a>
+                    <a class="navbar-brand" href="/"><?= App::$app->getProperty('site_name');?></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
