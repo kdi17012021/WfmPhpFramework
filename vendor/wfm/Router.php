@@ -43,6 +43,9 @@ class Router
     {
         $url = self::removeQueryString($url);//убираем гет параметры
         if (self::matchRoute($url)) {
+            if(!empty(self::$route['lang'])){
+                App::$app->setProperty('lang', self::$route['lang']);
+            }
             $controller = 'app\controllers\\' . self::$route['admin_prefix'] . self::$route['controller'] . 'Controller';
             //получим путь к контроллеру с постфиксом 'Controller'
             //потом проверяем есть ли вообще такой контроллер

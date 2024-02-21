@@ -1,9 +1,6 @@
 <?php
-
 use wfm\View;
-use wfm\App;
 /** @var $this View */
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -18,8 +15,7 @@ use wfm\App;
     <link rel="stylesheet" href="<?= PATH ?>/assets/css/magnific-popup.css">
     <link rel="stylesheet" href="<?= PATH ?>/assets/css/main.css">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= PATH ?>/assets/img/favicon.png">
-    <?= $this->getMeta() //урезанная обертка echo ?>
-    <?php $this->getMeta() ?>
+    <?= $this->getMeta() ?>
 </head>
 <body>
 
@@ -47,7 +43,6 @@ use wfm\App;
                         <span class="badge bg-danger rounded-pill count-items">0</span>
                     </a>
 
-
                     <a href="#"><i class="far fa-heart"></i></a>
 
                     <div class="dropdown d-inline-block">
@@ -60,30 +55,19 @@ use wfm\App;
                         </ul>
                     </div>
 
-                    <div class="dropdown d-inline-block">
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <img src="<?= PATH ?>/assets/img/ru.png" alt="">
-                        </a>
-                        <ul class="dropdown-menu" id="languages">
-                            <li>
-                                <button class="dropdown-item" data-langcode="en">
-                                    <img src="<?= PATH ?>/assets/img/en.png" alt="">
-                                    English</button>
-                            </li>
-                        </ul>
-                    </div>
+                    <?php new \app\widgets\language\Language() ?>
 
                 </div>
             </div>
         </div>
     </div><!-- header-top -->
 
-    <div class="header-bottom py-2" >
+    <div class="header-bottom py-2">
         <div class="container">
 
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid p-0">
-                    <a class="navbar-brand" href="/"><?= App::$app->getProperty('site_name');?></a>
+                    <a class="navbar-brand" href="/"><?= \wfm\App::$app->getProperty('site_name') ?></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
