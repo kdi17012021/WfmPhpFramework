@@ -22,7 +22,9 @@ class AppController extends Controller
 //        debug(App::$app->getProperty('language'));
 //        debug(Language::getLanguage(App::$app->getProperty('Languages')));
 
-
+        $lang = App::$app->getProperty('language');
+        \wfm\Language::load($lang['code'], $this->route);//не путаем с виджетом
+//        debug(\wfm\Language::$lang_data);
 
     }
 

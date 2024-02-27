@@ -15,7 +15,7 @@ Router::add('^(?P<lang>[a-z]+)?/?product/(?P<slug>[a-z0-9-]+)/?$', ['controller'
 
 
 
-Router::add('^$', ['controller' => 'Main']);
+Router::add('^(?P<lang>[a-z]+)?/?$', ['controller' => 'Main', 'action' => 'index']);
 //регулярное выражение от начала до конца строки ничего нет - просто new-ishop.loc/
 Router::add('^(?P<controller>[a-z-]+)/(?P<action>[a-z-]+)/?$');
-//() - карманы которые записывают в массив с ключами контроллер / вью что угодно
+//() - карманы которые записывают в массив с ключами контроллер / вью что угодно через preg_match

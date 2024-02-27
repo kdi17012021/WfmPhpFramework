@@ -5,7 +5,7 @@ use wfm\View;
 <!doctype html>
 <html lang="en">
 <head>
-    <base href="/">
+    <base href=" <?= base_url() // важная штука задается в хелперсах - чтобы язык тащился при переходе по ссылкам по всему сайту  ?>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?= PATH ?>/assets/bootstrap/css/bootstrap.min.css">
@@ -31,7 +31,7 @@ use wfm\View;
                 <div class="col text-end icons">
                     <form>
                         <div class="input-group" id="search">
-                            <input type="text" class="form-control" placeholder="Search..." name="s">
+                            <input type="text" class="form-control" placeholder="<?= __('tpl_search')?>" name="s">
                             <button class="btn close-search" type="button"><i class="fas fa-times"></i></i></button>
                             <button class="btn" type="submit"><i class="fas fa-search"></i></button>
                         </div>
@@ -50,8 +50,8 @@ use wfm\View;
                             <i class="far fa-user"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Авторизация</a></li>
-                            <li><a class="dropdown-item" href="#">Регистрация</a></li>
+                            <li><a class="dropdown-item" href="#"><?= __('tpl_login')?></a></li>
+                            <li><a class="dropdown-item" href="#"><?= __('tpl_signup')?></a></li>
                         </ul>
                     </div>
 
@@ -67,35 +67,39 @@ use wfm\View;
 
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid p-0">
-                    <a class="navbar-brand" href="/"><?= \wfm\App::$app->getProperty('site_name') ?></a>
+                    <a class="navbar-brand" href="<?= base_url() ?>"><?= \wfm\App::$app->getProperty('site_name') ?></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="category.html">Компьютеры</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="category.html">Планшеты</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Ноутбуки
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="category.html">Mac</a></li>
-                                    <li><a class="dropdown-item" href="category.html">Windows</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="category.html">Телефоны</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="category.html">Камеры</a>
-                            </li>
-                        </ul>
+                        <?php new \app\widgets\menu\Menu([
+                            'class' => 'navbar-nav ms-auto mb-2 mb-lg-0',
+                            'cache' => 30,
+                        ]) ?>
+<!--                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="category.html">Компьютеры</a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="category.html">Планшеты</a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-item dropdown">-->
+<!--                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                                    Ноутбуки-->
+<!--                                </a>-->
+<!--                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--                                    <li><a class="dropdown-item" href="category.html">Mac</a></li>-->
+<!--                                    <li><a class="dropdown-item" href="category.html">Windows</a></li>-->
+<!--                                </ul>-->
+<!--                            </li>-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="category.html">Телефоны</a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="category.html">Камеры</a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
                     </div>
 
                 </div>

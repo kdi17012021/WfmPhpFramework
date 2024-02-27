@@ -5,10 +5,10 @@
     <div class="col-lg-4 col-sm-6 mb-3">
         <div class="product-card">
             <div class="product-tumb">
-                <a href="product/<?= $product['slug'] ?>"><img src="<?= PATH . $product['img'] ?>" alt=""></a>
+                <a href="product/<?= $product['slug'] ?>"><img src="<?= PATH . $product['img'] //для картинок можно делать абсолютные ссылки - им пох на язык, и они сработают только с константой PATH  ?>" alt=""></a>
             </div>
             <div class="product-details">
-                <h4><a href="product/<?= $product['slug'] ?>"><?= $product['title'] ?></a></h4>
+                <h4><a href="product/<?= $product['slug'] ?>"><?= $product['title']// в ссылках по сайту важен язык, поэтому они относительные  ?></a></h4>
                 <p><?= $product['exerpt'] ?></p>
                 <div class="product-bottom-details d-flex justify-content-between">
                     <div class="product-price">
